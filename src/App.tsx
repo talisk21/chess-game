@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import ChessBoard, { BoardInterface } from "./components/Board/Board";
+import Cell, { CellInterface } from "./components/Cell/Cell";
+
+export enum Colors {
+  white = "white",
+  black = "black"
+}
+
+export enum FigureTypes {
+  pawn = "pawn",
+  bishop = "bishop",
+  rook = "rook",
+  knight = "knight",
+  queen = "queen",
+  king = "king"
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ChessBoard />
     </div>
   );
 }
