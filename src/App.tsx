@@ -1,7 +1,6 @@
-import React from "react";
+import React, {type ReactNode} from "react";
 import "./App.scss";
-import ChessBoard, { BoardInterface } from "./components/Board/Board";
-import Cell, { CellInterface } from "./components/Cell/Cell";
+import ChessBoard from "./components/Board/Board";
 
 export enum Colors {
   white = "white",
@@ -17,7 +16,7 @@ export enum FigureTypes {
   king = "king"
 }
 
-function App() {
+const App = ():ReactNode => {
   return (
     <div className="App">
       <ChessBoard />
